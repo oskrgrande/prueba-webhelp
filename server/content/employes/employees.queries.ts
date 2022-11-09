@@ -13,7 +13,7 @@ export const TeamQueries = {
         isActive = true
     `,
 
-    GetTeamsById: `
+    getEployeeById: `
     SELECT
       id,
         name,

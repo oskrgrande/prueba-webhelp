@@ -1,20 +1,20 @@
 import { execute } from "../../database/mysql.connector";
 
-import { TeamQueries } from "./teams.queries";
-import { ITeam } from "./teams.model";
+import { TeamQueries } from "./employees.queries";
+import { ITeam } from "./employees.model";
 
 /**
  * gets active teams
  */
- export const getTeams = async () => {
+ export const getEmployes = async () => {
     return execute<ITeam[]>(TeamQueries.GetTeams, []);
   };
   
   /**
    * gets a team based on id provided
    */
-  export const getTeamById = async (id: ITeam['id']) => {
-    return execute<ITeam>(TeamQueries.GetTeamsById, [id]);
+  export const getEployeeById = async (id: ITeam['id']) => {
+    return execute<ITeam>(TeamQueries.getEployeeById, [id]);
   };
   
   /**

@@ -1,5 +1,5 @@
 import { Router, Request, Response, application} from "express";
-import routeTeams from '../content/teams/teams.routes'
+import routeTeams from '../content/employes/employees.routes'
 const router = Router();
 import pkg from '../../package.json';
 

@@ -1,11 +1,11 @@
 import { Router } from 'express';
 const router = Router();
-import * as Controller from "./teams.controller";
+import * as Controller from "./employees.controller";
 
 router
     .route('/')
     .get(
-        Controller.getTeams
+        Controller.getEmployes
     );
 
 router

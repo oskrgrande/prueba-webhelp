@@ -5,8 +5,8 @@ import {
   IAddTeamReq,
   IUpdateTeamReq,
   IDeleteTeamReq
-} from './teams.model';
-import * as TeamService from './teams.service';
+} from './employees.model';
+import * as TeamService from './employees.service';
 
 
 /**
@@ -16,14 +16,14 @@ import * as TeamService from './teams.service';
  * @param res Express Response
  */
 
- export const getTeams: RequestHandler = async (req: Request, res: Response) => {
+ export const getEmployes: RequestHandler = async (req: Request, res: Response) => {
   try {
-    const teams = await TeamService.getTeams();
+    const teams = await TeamService.getEmployes();
     res.status(200).json({
       teams
     });
   } catch (error) {
-    console.error('[teams.controller][getTeams][Error] ', typeof error === 'object' ? JSON.stringify(error) : error);
+    console.error('[teams.controller][getEmployes][Error] ', typeof error === 'object' ? JSON.stringify(error) : error);
     res.status(500).json({
       message: 'There was an error when fetching teams'
     });
@@ -39,7 +39,7 @@ import * as TeamService from './teams.service';
 // @ts-ignore
 export const getTeamById: RequestHandler = async (req: IGetTeamReq, res: Response) => {
   try {
-    const team = await TeamService.getTeamById(req.params.id);
+    const team = await TeamService.getEployeeById(req.params.id);
 
     res.status(200).json({
       team

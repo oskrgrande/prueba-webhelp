@@ -1,7 +1,7 @@
 {
-  "name": "simpplus",
+  "name": "prueba-webhelp",
   "version": "1.0.0",
-  "description": "Una forma mas simple",
+  "description": "BFF",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -18,21 +18,11 @@
     "start": "npm run create && NODE_ENV=production node dist/server/index.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Guille-MF/booking.git"
-  },
+    "type": "git" },
   "keywords": [
-    "simple",
-    "psicologia",
-    "clinic",
-    "booking"
   ],
   "author": "Oscar Grande (oskrgrande@gmail.com)",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Guille-MF/booking/issues"
-  },
-  "homepage": "https://github.com/Guille-MF/booking#readme",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@types/chalk": "^2.2.0",
@@ -74,6 +64,6 @@
     "nodemon": "^2.0.19",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^4.8.2"
+    "typescript": "^4.8.4"
   }
 }

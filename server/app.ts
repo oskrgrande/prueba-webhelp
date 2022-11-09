@@ -25,7 +25,8 @@ export class Application {
     }
 
     settings() {
-        this.app.use(express.static(path.join(__dirname, './frontend/dist')))
+        console.log(path.join(__dirname, '../frontend/dist'))
+        this.app.use(express.static(path.join(__dirname, '../frontend/dist')))
     }
 
     middlewares() {

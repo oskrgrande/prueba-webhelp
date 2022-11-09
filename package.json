@@ -1,0 +1,79 @@
+{
+  "name": "simpplus",
+  "version": "1.0.0",
+  "description": "Una forma mas simple",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "build-babel-js": "babel dist --out-dir build",
+    "clean": "rimraf ./dist",
+    "installtsc": "npm install typescript",
+    "copyenv": "ncp ./.env.production ./dist/",
+    "dev": "NODE_ENV=development ts-node-dev server/index.ts",
+    "less": "lessc --clean-css -x  ./frontend/src/styles/less/style.less  ./frontend/src/styles/main.css",
+    "build-frontend": "npm run less && cd ./frontend && npm run build",
+    "add-frontend": "ncp ./frontend/dist ./dist/frontend",
+    "create": "npm run installtsc && npm run clean && npm run build && npm run copyenv && npm run build-frontend",
+    "start": "npm run create && NODE_ENV=production node dist/server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guille-MF/booking.git"
+  },
+  "keywords": [
+    "simple",
+    "psicologia",
+    "clinic",
+    "booking"
+  ],
+  "author": "Oscar Grande (oskrgrande@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Guille-MF/booking/issues"
+  },
+  "homepage": "https://github.com/Guille-MF/booking#readme",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.8.5",
+    "@types/chalk": "^2.2.0",
+    "@types/cors": "^2.8.12",
+    "bcryptjs": "^2.4.3",
+    "chalk": "^4.1.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^6.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "ncp": "^2.0.0",
+    "npc": "^0.0.1",
+    "rimraf": "^3.0.2",
+    "swagger-jsdoc": "^6.2.5",
+    "swagger-ui-express": "^4.5.0",
+    "tsc": "^2.0.4",
+    "uuid": "^8.3.2",
+    "vite": "^3.1.8"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.13",
+    "@babel/node": "^7.18.10",
+    "@babel/preset-env": "^7.18.10",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/body-parser": "^1.19.2",
+    "@types/compression": "^1.7.2",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/morgan": "^1.9.3",
+    "@types/mysql": "^2.15.21",
+    "@types/node-fetch": "^2.6.2",
+    "@types/uuid": "^8.3.4",
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.19",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.2"
+  }
+}

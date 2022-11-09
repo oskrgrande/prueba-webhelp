@@ -1,0 +1,14 @@
+create table test_table( 
+id integer not null auto_increment primary key, 
+stamp_created timestamp default '0000-00-00 00:00:00', 
+stamp_updated timestamp default now() on update now() 
+); 
+
+
+
+# add redux toolkit to front
+https://redux-toolkit.js.org/introduction/getting-started
+
+
+
+lessc --clean-css -x  ./frontend/src/styles/less/style.less  ./frontend/src/styles/main.css     
